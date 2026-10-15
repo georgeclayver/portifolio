@@ -1,0 +1,155 @@
+/* Reset básico  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fundo em degradê */
+body {
+  min-height: 100vh;
+  font-family: "Inter", Arial, sans-serif;
+  color: #111;
+  background-color: #8080a8;
+  background-image:
+    radial-gradient(circle at 92% 18%, #5519b6 0, transparent 38%),
+    radial-gradient(circle at 70% 42%, #10043b 0, transparent 38%),
+    radial-gradient(circle at 4% 96%, #091133 0, transparent 34%),
+    radial-gradient(circle at 4% 52%, #0e233d 0, transparent 34%);
+  background-attachment: fixed;
+}
+
+/* Container central */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Perfil (foto, nome, descrição) */
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.perfil img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #999;
+  background: #fff;
+}
+
+.perfil .nome {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.perfil .descricao {
+  font-size: 0.95rem;
+}
+
+/* Botões da página inicial */
+
+.botoes {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.botao {
+  display: block;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  color: #111;
+  text-decoration: none;
+  background: rgba(205, 200, 215, 0.45);
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.botao:hover,
+.botao:focus-visible {
+  background: rgba(205, 200, 215, 0.85);
+}
+
+/* Página Sobre mim */
+.sobre {
+  max-width: 600px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Página "Projetos": grade de cards */
+.cards {
+  width: 100%;
+  max-width: 640px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  text-align: left;
+  background: rgba(205, 200, 215, 0.35);
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #eee;
+}
+
+.card a {
+  font-size: 0.85rem;
+  color: #111;
+}
+
+/* Ícones de redes sociais  */
+.redes {
+  display: flex;
+  gap: 20px;
+}
+
+.redes a {
+  color: #111;
+  display: inline-flex;
+}
+
+.redes svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/*  Link de voltar  */
+.voltar {
+  font-size: 0.85rem;
+  color: #111;
+}
+
+/* Celular */
+@media (max-width: 560px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
